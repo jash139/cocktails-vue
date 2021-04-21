@@ -37,6 +37,7 @@ export default {
   background-color: white;
   border-radius: 10rem;
   display: flex;
+  margin: 1.5rem;
   max-width: 25rem;
 }
 .search-field {
@@ -64,10 +65,11 @@ export default {
   color: white;
   display: flex;
   align-items: center;
+  font-size: 1rem;
   font-weight: 400;
   justify-content: space-around;
   outline-width: 0;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   text-transform: uppercase;
   transition: all 0.2s ease;
 }

@@ -3,17 +3,20 @@
     <div class="main">
       <SearchBar />
       <h1>Home</h1>
+      <Ingredients />
     </div>
   </div>
 </template>
 
 <script>
 import SearchBar from "./SearchBar";
+import Ingredients from "./Ingredients";
 
 export default {
   name: "Home",
   components: {
     SearchBar,
+    Ingredients,
   },
 };
 </script>
