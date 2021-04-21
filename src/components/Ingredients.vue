@@ -1,10 +1,15 @@
 <template>
-  <h2>ingredient</h2>
+  <Subheading text="Ingredients" />
 </template>
 
 <script>
+import Subheading from "./Subheading";
+
 export default {
   name: "Ingredients",
+  components: {
+    Subheading,
+  },
 };
 </script>
 
