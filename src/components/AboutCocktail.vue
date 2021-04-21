@@ -1,4 +1,5 @@
 <template>
+  <Thumbnail />
   <div class="about-cocktail">
     <p class="is-alcoholic">Non Alcoholic</p>
     <p class="instruction">
@@ -12,8 +13,13 @@
 </template>
 
 <script>
+import Thumbnail from "./Thumbnail";
+
 export default {
   name: "AboutCocktail",
+  components: {
+    Thumbnail,
+  },
 };
 </script>
 
