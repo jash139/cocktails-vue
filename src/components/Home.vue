@@ -1,6 +1,7 @@
 <template>
   <div class="root">
     <div class="main">
+      <Header />
       <SearchBar />
       <h1>Home</h1>
       <Thumbnail />
@@ -15,6 +16,7 @@ import SearchBar from "./SearchBar";
 import Ingredients from "./Ingredients";
 import Thumbnail from "./Thumbnail";
 import AboutCocktail from "./AboutCocktail";
+import Header from "./Header";
 
 export default {
   name: "Home",
@@ -23,6 +25,7 @@ export default {
     Ingredients,
     Thumbnail,
     AboutCocktail,
+    Header,
   },
 };
 </script>
