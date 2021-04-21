@@ -3,6 +3,7 @@
     <div class="main">
       <SearchBar />
       <h1>Home</h1>
+      <Thumbnail />
       <Ingredients />
     </div>
   </div>
@@ -11,12 +12,14 @@
 <script>
 import SearchBar from "./SearchBar";
 import Ingredients from "./Ingredients";
+import Thumbnail from "./Thumbnail";
 
 export default {
   name: "Home",
   components: {
     SearchBar,
     Ingredients,
+    Thumbnail,
   },
 };
 </script>
