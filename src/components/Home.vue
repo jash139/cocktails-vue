@@ -37,8 +37,9 @@ export default {
   justify-content: center;
 }
 .main {
-  min-height: 80vh;
   background-color: rgb(217, 237, 255);
+  border-radius: 10px;
+  min-height: 80vh;
   min-width: 80%;
 }
 </style>
