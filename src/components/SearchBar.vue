@@ -7,7 +7,10 @@
       name="searchQuery"
       placeholder="Search cocktails"
     />
-    <input type="submit" value="Search" class="search-btn" />
+    <button type="submit" class="search-btn">
+      <i class="fas fa-search search-icon" />
+      Search
+    </button>
   </form>
 </template>
 
@@ -58,13 +61,21 @@ export default {
   background-image: linear-gradient(to right, #89f7fe, #66a6ff);
   border-width: 0;
   border-radius: 10rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  justify-content: space-around;
   outline-width: 0;
-  padding: 1rem;
-  width: 10rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
   transition: all 0.2s ease;
 }
 .search-btn:hover {
   cursor: pointer;
   transform: scale(1.08);
+}
+.search-icon {
+  margin-right: 1rem;
 }
 </style>

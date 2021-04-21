@@ -17,6 +17,7 @@ export default {
 * {
   box-sizing: border-box;
   font-family: "Antonio", sans-serif;
+  letter-spacing: 0.8px;
   margin: 0;
   padding: 0;
 }
