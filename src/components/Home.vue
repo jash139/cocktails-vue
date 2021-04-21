@@ -2,27 +2,20 @@
   <div class="root">
     <div class="main">
       <Header />
-      <h1>Home</h1>
-      <Thumbnail />
-      <AboutCocktail />
-      <Ingredients />
+      <Body />
     </div>
   </div>
 </template>
 
 <script>
-import Ingredients from "./Ingredients";
-import Thumbnail from "./Thumbnail";
-import AboutCocktail from "./AboutCocktail";
 import Header from "./Header";
+import Body from "./Body";
 
 export default {
   name: "Home",
   components: {
-    Ingredients,
-    Thumbnail,
-    AboutCocktail,
     Header,
+    Body,
   },
 };
 </script>
