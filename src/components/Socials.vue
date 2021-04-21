@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+.socials {
+  display: flex;
+  align-items: center;
+}
 .social-button {
   border-radius: 10rem;
   display: inline-flex;
