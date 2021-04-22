@@ -3,6 +3,12 @@
     <Subheading text="Drinks & Cocktails" />
     <div class="cocktails-menu">
       <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
+      <MenuItem :cocktailDetails="cocktailDetails" />
     </div>
   </div>
 </template>
@@ -35,5 +41,16 @@ export default {
   background-color: rgba(255, 255, 255, 0.7);
 }
 .cocktails-menu {
+  height: 500px;
+  overflow-y: auto;
+}
+.cocktails-menu::-webkit-scrollbar {
+  width: 1.5rem;
+}
+.cocktails-menu::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1rem;
+  border: 9px solid transparent;
+  background-clip: content-box;
 }
 </style>
