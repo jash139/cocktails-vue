@@ -19,8 +19,8 @@ export default {
 
 <style scoped>
 .thumbnail {
-  background-color: #89f7fe;
   position: relative;
+  margin-bottom: 1rem;
   max-width: 500px;
 }
 .cocktail-image {

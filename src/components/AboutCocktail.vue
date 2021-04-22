@@ -1,6 +1,6 @@
 <template>
-  <Thumbnail />
   <div class="about-cocktail">
+    <Thumbnail />
     <p class="is-alcoholic">Non Alcoholic</p>
     <p class="instruction">
       Rub the rim of the glass with the lime slice to make the salt stick to it.
@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .about-cocktail {
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 500px;
 }
 .is-alcoholic {
