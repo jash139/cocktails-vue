@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-item">
+  <div class="menu-item" @click="onClick">
     <img
       class="cocktail-avatar"
       :src="cocktailDetails.thumbnail"
@@ -17,6 +17,11 @@ export default {
   name: "MenuItem",
   props: {
     cocktailDetails: Object,
+  },
+  methods: {
+    onClick() {
+      console.log(this.cocktailDetails);
+    },
   },
 };
 </script>
