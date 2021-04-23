@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-item" @click="onClick">
+  <div class="cocktail" @click="onClick">
     <img
       class="cocktail-avatar"
       :src="cocktailDetails.thumbnail"
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "MenuItem",
+  name: "Cocktail",
   props: {
     cocktailDetails: Object,
   },
@@ -27,12 +27,12 @@ export default {
 </script>
 
 <style scoped>
-.menu-item {
+.cocktail {
   display: flex;
   align-items: center;
   padding: 1rem;
 }
-.menu-item:hover {
+.cocktail:hover {
   background-color: rgb(217, 237, 255);
   cursor: pointer;
 }

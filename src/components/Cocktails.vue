@@ -2,20 +2,21 @@
   <div class="cocktails-div">
     <Subheading text="Drinks & Cocktails" />
     <div class="cocktails-menu">
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
-      <MenuItem :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail :cocktailDetails="cocktailDetails" />
     </div>
   </div>
 </template>
 
 <script>
 import Subheading from "./Subheading";
-import MenuItem from "./MenuItem";
+import Cocktail from "./Cocktail";
 
 export default {
   name: "Cocktails",
@@ -31,7 +32,7 @@ export default {
   },
   components: {
     Subheading,
-    MenuItem,
+    Cocktail,
   },
 };
 </script>
