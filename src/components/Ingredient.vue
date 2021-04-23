@@ -7,6 +7,9 @@
 <script>
 export default {
   name: "Ingredient",
+  props: {
+    ingredient: String,
+  },
 };
 </script>
 

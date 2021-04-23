@@ -1,12 +1,19 @@
 <template>
   <div class="ingredients-div">
     <Subheading text="Ingredients" />
-    <div class="ingredients-menu"></div>
+    <div class="ingredients-menu">
+      <Ingredient :ingredient="cocktailDetails.ingredient[0]" />
+      <Ingredient :ingredient="cocktailDetails.ingredient[1]" />
+      <Ingredient :ingredient="cocktailDetails.ingredient[2]" />
+      <Ingredient :ingredient="cocktailDetails.ingredient[2]" />
+      <Ingredient :ingredient="cocktailDetails.ingredient[0]" />
+    </div>
   </div>
 </template>
 
 <script>
 import Subheading from "./Subheading";
+import Ingredient from "./Ingredient";
 
 export default {
   name: "Ingredients",
@@ -17,11 +24,13 @@ export default {
           "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80",
         name: "Margarita",
         isAlcoholic: "Non Alcoholic",
+        ingredient: ["ingredient 1", "ingredient 2", "ingredient 3"],
       },
     };
   },
   components: {
     Subheading,
+    Ingredient,
   },
 };
 </script>
