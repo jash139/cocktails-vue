@@ -9,14 +9,16 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Cocktail",
   props: {
     cocktail: Object,
   },
   methods: {
+    ...mapActions(["setActiveCocktail"]),
     onClick() {
-      console.log(this.cocktail);
+      this.setActiveCocktail(this.cocktail);
     },
   },
 };
