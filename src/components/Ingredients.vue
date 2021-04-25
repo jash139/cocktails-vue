@@ -2,16 +2,17 @@
   <div class="ingredients-div">
     <Subheading text="Ingredients" />
     <div class="ingredients-menu">
-      <Ingredient :ingredient="cocktailDetails.ingredient[0]" />
-      <Ingredient :ingredient="cocktailDetails.ingredient[1]" />
-      <Ingredient :ingredient="cocktailDetails.ingredient[2]" />
-      <Ingredient :ingredient="cocktailDetails.ingredient[2]" />
-      <Ingredient :ingredient="cocktailDetails.ingredient[0]" />
+      <Ingredient
+        v-for="ingredient in activeCocktailIngredients"
+        :key="ingredient"
+        :ingredient="ingredient"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Subheading from "./Subheading";
 import Ingredient from "./Ingredient";
 
@@ -28,6 +29,7 @@ export default {
       },
     };
   },
+  computed: mapGetters(["activeCocktailIngredients"]),
   components: {
     Subheading,
     Ingredient,
