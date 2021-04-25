@@ -1,5 +1,5 @@
 <template>
-  <div class="ingredient" @click="onClick">
+  <div class="ingredient">
     <h4 class="ingredient-name">{{ ingredient }}</h4>
   </div>
 </template>

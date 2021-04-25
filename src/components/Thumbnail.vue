@@ -43,5 +43,6 @@ export default {
   font-family: "Tangerine", cursive;
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 </style>

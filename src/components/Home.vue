@@ -2,6 +2,7 @@
   <div class="root">
     <div class="main">
       <Header />
+      <IngredientModal />
       <Body />
     </div>
   </div>
@@ -10,12 +11,14 @@
 <script>
 import Header from "./Header";
 import Body from "./Body";
+import IngredientModal from "./IngredientModal";
 
 export default {
   name: "Home",
   components: {
     Header,
     Body,
+    IngredientModal,
   },
 };
 </script>
