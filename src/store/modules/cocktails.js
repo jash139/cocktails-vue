@@ -1,12 +1,23 @@
 import axios from "axios";
 
-const state = {};
+const state = {
+    cocktails: []
+};
 
-const getters = {};
+const getters = {
+    allCocktails: state => state.cocktails
+};
 
-const actions = {};
+const actions = {
+    async searchByName({ commit }, name) {
+        const response = await axios.get(`www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
+        commit("setCocktails", response.data);
+    }
+};
 
-const mutations = {};
+const mutations = {
+    setCocktails: (state, cocktails) => state.cocktails = cocktails
+};
 
 export default {
     state,
