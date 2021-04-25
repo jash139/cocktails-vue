@@ -25,8 +25,8 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      if (!this.searchQuery) {
-      }
+      // if (!this.searchQuery) {
+      // }
     },
   },
 };
