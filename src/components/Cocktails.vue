@@ -2,34 +2,23 @@
   <div class="cocktails-div">
     <Subheading text="Drinks & Cocktails" />
     <div class="cocktails-menu">
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
-      <Cocktail :cocktailDetails="cocktailDetails" />
+      <Cocktail
+        v-for="cocktail in allCocktails"
+        :key="cocktail.idDrink"
+        :cocktail="cocktail"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Subheading from "./Subheading";
 import Cocktail from "./Cocktail";
 
 export default {
   name: "Cocktails",
-  data() {
-    return {
-      cocktailDetails: {
-        thumbnail:
-          "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80",
-        name: "Margarita",
-        isAlcoholic: "Non Alcoholic",
-      },
-    };
-  },
+  computed: mapGetters(["allCocktails"]),
   components: {
     Subheading,
     Cocktail,

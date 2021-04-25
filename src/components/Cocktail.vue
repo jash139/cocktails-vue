@@ -1,13 +1,9 @@
 <template>
   <div class="cocktail" @click="onClick">
-    <img
-      class="cocktail-avatar"
-      :src="cocktailDetails.thumbnail"
-      alt="cocktail"
-    />
+    <img class="cocktail-avatar" :src="cocktail.strDrinkThumb" alt="cocktail" />
     <div class="about-cocktail">
-      <h4 class="cocktail-name">{{ cocktailDetails.name }}</h4>
-      <p class="is-alcoholic">{{ cocktailDetails.isAlcoholic }}</p>
+      <h4 class="cocktail-name">{{ cocktail.strDrink }}</h4>
+      <p class="is-alcoholic">{{ cocktail.strAlcoholic }}</p>
     </div>
   </div>
 </template>
@@ -16,11 +12,11 @@
 export default {
   name: "Cocktail",
   props: {
-    cocktailDetails: Object,
+    cocktail: Object,
   },
   methods: {
     onClick() {
-      console.log(this.cocktailDetails);
+      console.log(this.cocktail);
     },
   },
 };

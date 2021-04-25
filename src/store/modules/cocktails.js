@@ -10,8 +10,8 @@ const getters = {
 
 const actions = {
     async searchByName({ commit }, name) {
-        const response = await axios.get(`www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
-        commit("setCocktails", response.data);
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
+        commit("setCocktails", response.data.drinks);
     }
 };
 
