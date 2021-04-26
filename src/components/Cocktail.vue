@@ -28,7 +28,7 @@ export default {
 .cocktail {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .cocktail:hover {
   background-color: rgb(217, 237, 255);
@@ -40,12 +40,11 @@ export default {
   margin: 0 1rem;
   width: 60px;
 }
-.about-cocktail {
-}
 .cocktail-name {
   color: #66a6ff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -53,7 +52,7 @@ export default {
 }
 .is-alcoholic {
   color: #60728a;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 </style>

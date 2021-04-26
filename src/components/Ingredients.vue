@@ -32,7 +32,7 @@ export default {
   border-bottom-right-radius: 10px;
 }
 .ingredients-menu {
-  height: 500px;
+  max-height: 500px;
   overflow-y: auto;
 }
 .ingredients-menu::-webkit-scrollbar {

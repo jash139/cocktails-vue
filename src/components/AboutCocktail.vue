@@ -28,7 +28,18 @@ export default {
   max-width: 500px;
 }
 .cocktail-details {
-  margin: 1rem;
+  margin-left: 1rem;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.cocktail-details::-webkit-scrollbar {
+  width: 1.5rem;
+}
+.cocktail-details::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1rem;
+  border: 9px solid transparent;
+  background-clip: content-box;
 }
 .is-alcoholic {
   color: #66a6ff;

@@ -29,8 +29,9 @@ export default {
 }
 .ingredient-name {
   color: #66a6ff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
