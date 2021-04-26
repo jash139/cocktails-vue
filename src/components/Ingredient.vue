@@ -1,5 +1,5 @@
 <template>
-  <div class="ingredient" @click="toggleModalState">
+  <div class="ingredient" @click="getIngredient(ingredient)">
     <h4 class="ingredient-name">{{ ingredient }}</h4>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
     ingredient: String,
   },
   methods: {
-    ...mapActions(["toggleModalState"]),
+    ...mapActions(["getIngredient"]),
   },
 };
 </script>

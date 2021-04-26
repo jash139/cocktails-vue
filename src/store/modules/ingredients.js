@@ -14,9 +14,10 @@ const actions = {
     async getIngredient({ commit }, name) {
         const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${name}`);
         const ingredientDetails = {
-            ...response.data.ingredients,
+            ...response.data.ingredients[0],
             thumbnail: "https://www.thecocktaildb.com/images/ingredients/" + name + ".png"
         };
+        commit("changeModalState");
         commit("setIngredient", ingredientDetails);
     },
     toggleModalState({ commit }) {
