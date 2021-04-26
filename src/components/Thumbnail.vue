@@ -1,10 +1,12 @@
 <template>
   <div class="thumbnail">
-    <img
-      class="cocktail-image"
-      :src="cocktail.strDrinkThumb"
-      :alt="cocktail.strDrink"
-    />
+    <figure>
+      <img
+        class="cocktail-image"
+        :src="cocktail.strDrinkThumb"
+        :alt="cocktail.strDrink"
+      />
+    </figure>
     <div class="cocktail-name-div">
       <h3 class="cocktail-name">{{ cocktail.strDrink }}</h3>
     </div>
@@ -25,6 +27,16 @@ export default {
   position: relative;
   margin-bottom: 1rem;
   max-width: 500px;
+}
+figure {
+  /* width: 300px; container-width */
+  overflow: hidden;
+  margin: 0;
+}
+figure img {
+  display: block;
+  margin: -21.875% 0;
+  width: 100%;
 }
 .cocktail-image {
   width: 100%;

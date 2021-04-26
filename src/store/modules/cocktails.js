@@ -3,7 +3,7 @@ import axios from "axios";
 const state = {
     cocktails: [],
     activeCocktail: {
-        strDrinkThumb: "https://images.unsplash.com/photo-1570716893556-8cae2e541ba8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        strDrinkThumb: "https://images.unsplash.com/photo-1569929233287-f0565228c4d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         strDrink: "Select Drink",
         strInstructions: "-"
     },
