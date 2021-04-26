@@ -1,10 +1,12 @@
 <template>
   <div class="about-cocktail">
     <Thumbnail :cocktail="activeCocktail" />
-    <p class="is-alcoholic">{{ activeCocktail.strAlcoholic }}</p>
-    <p class="instruction">
-      {{ activeCocktail.strInstructions }}
-    </p>
+    <div class="cocktail-details">
+      <p class="is-alcoholic">{{ activeCocktail.strAlcoholic }}</p>
+      <p class="instruction">
+        {{ activeCocktail.strInstructions }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -23,8 +25,10 @@ export default {
 
 <style scoped>
 .about-cocktail {
-  padding: 0 1rem;
   max-width: 500px;
+}
+.cocktail-details {
+  margin: 1rem;
 }
 .is-alcoholic {
   color: #66a6ff;

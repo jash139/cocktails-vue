@@ -23,5 +23,8 @@ export default {
 
 <style scoped>
 .body {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 0;
 }
 </style>
