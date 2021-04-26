@@ -32,7 +32,7 @@ export default {
   border-bottom-left-radius: 10px;
 }
 .cocktails-menu {
-  max-height: 500px;
+  height: 500px;
   overflow-y: auto;
 }
 .cocktails-menu::-webkit-scrollbar {

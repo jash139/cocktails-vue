@@ -17,6 +17,11 @@ const getters = {
 };
 
 const actions = {
+    async getRandomCocktails({ commit }) {
+        const randomLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${randomLetter}`);
+        commit("setCocktails", response.data.drinks);
+    },
     async searchByName({ commit }, name) {
         const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
         commit("setCocktails", response.data.drinks);

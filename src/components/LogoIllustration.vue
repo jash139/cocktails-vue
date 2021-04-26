@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="logo"
     width="54"
     height="68"
     viewBox="0 0 54 68"
@@ -90,3 +91,12 @@ export default {
   name: "LogoIllustration",
 };
 </script>
+
+<style scoped>
+.logo {
+  transition: all 0.2s ease;
+}
+.logo:hover {
+  transform: scale(1.08);
+}
+</style>

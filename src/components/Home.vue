@@ -9,16 +9,23 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import Header from "./Header";
 import Body from "./Body";
 import IngredientModal from "./IngredientModal";
 
 export default {
   name: "Home",
+  methods: {
+    ...mapActions(["getRandomCocktails"]),
+  },
   components: {
     Header,
     Body,
     IngredientModal,
+  },
+  created() {
+    this.getRandomCocktails();
   },
 };
 </script>
