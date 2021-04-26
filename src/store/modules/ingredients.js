@@ -2,10 +2,12 @@ import axios from "axios";
 
 const state = {
     ingredient: {},
+    ingredientModal: false
 };
 
 const getters = {
     ingredient: state => state.ingredient,
+    modalState: state => state.ingredientModal,
 };
 
 const actions = {
@@ -16,11 +18,15 @@ const actions = {
             thumbnail: "https://www.thecocktaildb.com/images/ingredients/" + name + ".png"
         };
         commit("setIngredient", ingredientDetails);
+    },
+    toggleModalState({ commit }) {
+        commit("changeModalState");
     }
 };
 
 const mutations = {
-    setIngredient: (state, ingredient) => state.ingredient = ingredient
+    setIngredient: (state, ingredient) => state.ingredient = ingredient,
+    changeModalState: (state) => state.ingredientModal = !state.ingredientModal
 };
 
 export default {

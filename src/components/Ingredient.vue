@@ -1,14 +1,18 @@
 <template>
-  <div class="ingredient">
+  <div class="ingredient" @click="toggleModalState">
     <h4 class="ingredient-name">{{ ingredient }}</h4>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Ingredient",
   props: {
     ingredient: String,
+  },
+  methods: {
+    ...mapActions(["toggleModalState"]),
   },
 };
 </script>
