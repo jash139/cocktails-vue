@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .body {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr) minmax(0, 0.75fr);
   grid-column-gap: 0;
 }
 </style>
