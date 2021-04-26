@@ -29,6 +29,7 @@ export default {
 <style scoped>
 .cocktails-div {
   background-color: rgba(255, 255, 255, 0.7);
+  border-bottom-left-radius: 10px;
 }
 .cocktails-menu {
   height: 500px;

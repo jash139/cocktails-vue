@@ -29,6 +29,7 @@ export default {
 <style scoped>
 .ingredients-div {
   background-color: rgba(255, 255, 255, 0.7);
+  border-bottom-right-radius: 10px;
 }
 .ingredients-menu {
   height: 500px;
