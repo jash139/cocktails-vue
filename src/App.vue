@@ -16,7 +16,7 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-  font-family: "Antonio", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
