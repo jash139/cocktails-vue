@@ -57,6 +57,7 @@ export default {
   margin: 1rem auto;
   padding: 3rem;
   max-width: 600px;
+  min-height: 300px;
   position: relative;
 }
 
