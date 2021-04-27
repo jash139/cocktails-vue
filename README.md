@@ -1,5 +1,7 @@
 # cocktails-vue
 
+Drinks and cocktails is a front-end application to search and browse drinks. The app uses vue with vuex for state management. TheCocktailDB api is used to fetch details.
+
 Hosted website: [https://cocktailsndrinks.netlify.app]
 
 ## Project setup
