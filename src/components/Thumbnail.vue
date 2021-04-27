@@ -43,7 +43,7 @@ figure img {
 }
 .cocktail-name-div {
   background-image: linear-gradient(to right, #89f7fe, #66a6ff);
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 0.5rem 1.5rem;
   position: absolute;
   left: 50%;

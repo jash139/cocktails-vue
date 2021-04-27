@@ -1,9 +1,7 @@
 <template>
   <div>
-    <button onclick="showSnackbar()">Show Snackbar</button>
-    <div id="snackbar">
-      <p>Email copied!</p>
-    </div>
+    <button @click="showSnackbar()">Show Snackbar</button>
+    <div id="snackbar">Email copied!</div>
   </div>
 </template>
 
@@ -15,8 +13,8 @@ export default {
       var snackbar = document.getElementById("snackbar");
       snackbar.className = "show";
       setTimeout(() => {
-        x.className = x.className.replace("show", "");
-      }, 3000);
+        snackbar.className = snackbar.className.replace("show", "");
+      }, 4000);
     },
   },
 };
@@ -24,19 +22,20 @@ export default {
 
 <style>
 #snackbar {
-  visibility: hidden;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.17);
+  color: #66a6ff;
+  font-size: 1rem;
+  font-weight: 700;
   min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
   padding: 16px;
   position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  text-align: center;
+  visibility: hidden;
   z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
 }
 
 #snackbar.show {
@@ -51,7 +50,7 @@ export default {
     opacity: 0;
   }
   to {
-    bottom: 30px;
+    bottom: 2rem;
     opacity: 1;
   }
 }
@@ -62,14 +61,14 @@ export default {
     opacity: 0;
   }
   to {
-    bottom: 30px;
+    bottom: 2rem;
     opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeout {
   from {
-    bottom: 30px;
+    bottom: 2rem;
     opacity: 1;
   }
   to {
@@ -80,7 +79,7 @@ export default {
 
 @keyframes fadeout {
   from {
-    bottom: 30px;
+    bottom: 2rem;
     opacity: 1;
   }
   to {
