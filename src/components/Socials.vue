@@ -1,12 +1,12 @@
 <template>
   <div class="socials">
-    <div class="social-button">
+    <div class="social-button" @click="openTab(contactLinks.linkedin)">
       <LinkedinSocial />
     </div>
-    <div class="social-button">
+    <div class="social-button" @click="openTab(contactLinks.github)">
       <GithubSocial />
     </div>
-    <div class="social-button">
+    <div class="social-button" @click="handleClick(contactLinks.email)">
       <EmailSocial />
     </div>
   </div>
@@ -17,8 +17,20 @@ import LinkedinSocial from "./LinkedinSocial";
 import GithubSocial from "./GithubSocial";
 import EmailSocial from "./EmailSocial";
 
+import contactLinks from "../constants/contactLinks";
+
 export default {
   name: "Socials",
+  data() {
+    return {
+      contactLinks,
+    };
+  },
+  methods: {
+    openTab(url) {
+      window.open(url, "_blank");
+    },
+  },
   components: {
     LinkedinSocial,
     GithubSocial,
