@@ -6,9 +6,10 @@
     <div class="social-button" @click="openTab(contactLinks.github)">
       <GithubSocial />
     </div>
-    <div class="social-button" @click="handleClick(contactLinks.email)">
+    <div class="social-button" @click="showSnackbar()">
       <EmailSocial />
     </div>
+    <div id="snackbar">Email copied!</div>
   </div>
 </template>
 
@@ -30,6 +31,13 @@ export default {
     openTab(url) {
       window.open(url, "_blank");
     },
+    showSnackbar() {
+      var snackbar = document.getElementById("snackbar");
+      snackbar.className = "show";
+      setTimeout(() => {
+        snackbar.className = snackbar.className.replace("show", "");
+      }, 4000);
+    },
   },
   components: {
     LinkedinSocial,
@@ -44,6 +52,7 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .social-button {
   border-radius: 10rem;
   display: inline-flex;
@@ -54,7 +63,75 @@ export default {
   height: 50px;
   width: 50px;
 }
+
 .social-button:hover {
   background-color: #66a6ff1e;
+}
+
+#snackbar {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.17);
+  color: #66a6ff;
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 250px;
+  padding: 16px;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 2rem;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 2rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 2rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 </style>
