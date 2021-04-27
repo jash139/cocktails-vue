@@ -6,7 +6,7 @@
     <div class="social-button" @click="openTab(contactLinks.github)">
       <GithubSocial />
     </div>
-    <div class="social-button" @click="showSnackbar()">
+    <div class="social-button" @click="handleEmailClick()">
       <EmailSocial />
     </div>
     <div id="snackbar">Email copied!</div>
@@ -31,7 +31,14 @@ export default {
     openTab(url) {
       window.open(url, "_blank");
     },
-    showSnackbar() {
+    handleEmailClick() {
+      var tempInput = document.createElement("input");
+      tempInput.value = contactLinks.email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
       var snackbar = document.getElementById("snackbar");
       snackbar.className = "show";
       setTimeout(() => {
