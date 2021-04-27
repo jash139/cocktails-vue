@@ -1,5 +1,7 @@
 # cocktails-vue
 
+Hosted website: [https://cocktailsndrinks.netlify.app]
+
 ## Project setup
 ```
 npm install
